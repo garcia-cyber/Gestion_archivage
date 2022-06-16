@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title %}register {% endblock %}
+
+{% block body %}
+<section class='login_height'>
+    <section class='login_flex'>
+        <section class='login_title'>
+            <h2 >connexion</h2>
+        </section>
+        <section class='login_form' name = 'acces'>
+            <form class = 'form_login' method='post' action ='/register_verify'>
+                
+                <input type='text' placeholder = 'votre username' name = 'user'>
+                <input type='email' placeholder = 'exemple@gmail' name = 'mail'>
+                <select name = 'acces'>{%for i in af%}<option value='{{i[0]}}'>{{i[1]}}</option> {%endfor%}</select>
+                <input type='password' placeholder = 'inserez votre password' name = 'pwd' required>
+                <input type='password' placeholder = 'confirmer votre password' name = 'pwdc' required>
+                <input type = 'submit' value = 'register' class='btn_login  mt-2 btn btn-secondary'>
+            </form>
+        </section>
+        <!--section class='text-dark font-weight-bold' > cliquez pour cree un compte<a href = '' class='btn btn-outline-info ml-3 mb-2'>cree un connte</a></section-->
+    </section>
+    
+</section>
+{%endblock%} 

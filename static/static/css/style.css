@@ -1,0 +1,183 @@
+*{
+  margin:0;
+  padding: 0;
+
+}
+
+body{
+  background: #e5e5e5;
+  background: #eeeeee;
+
+
+}
+
+:root{
+  --color-primary:#f9f9f9;
+}
+
+/*
+
+*********PARTIE LOGIN DESIGN
+*/
+
+.login_center{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+
+.login{
+  max-width: 400px;
+  border-radius: 10px;
+  margin:0 auto;
+  padding: 10px 10px;
+  /*border: 2px solid ;*/
+  display: flex;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
+  flex-direction: column;
+  background:#f9f9f9;
+  box-shadow: 0px 0px 15px var(--colo-primary);
+
+}
+
+.verification{
+  padding: 15px 10px;
+  color: red;
+
+  margin: 0 auto;
+  font-size: 15px;
+  background: #eeeeee;
+  border-radius: 5px;
+
+}
+
+.text_auth{
+  padding: 15px 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: steelblue;
+  letter-spacing: 2px
+}
+
+.login_form{
+  max-width: 350px;
+  /*margin: 0 auto;*/
+  padding: 15px 15px;
+}
+
+.login_form .inpit_login{
+  padding: 10px 8px;
+  margin-bottom: 1rem;
+  width: 90%;
+}
+
+.login_form .inpit_login::placeholder{
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.login_form .inpit_login:focus{
+  box-shadow: 0px 1px 5px steelblue;
+}
+
+.login_form .btn_login{
+  padding: 3px 3px;
+  text-transform: capitalize;
+
+
+}
+
+.login_form .btn_login:hover{
+  cursor: pointer;
+  border-bottom-color: red:
+}
+
+/*
+************************* FIN DE PAGE LOGIN
+
+*/
+
+.all_send{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.m_all{
+  max-width: 600px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin:0 auto;
+  /*border: 2px solid ;*/
+  display: flex;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
+  flex-direction: column;
+  background:#f9f9f9;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.9) ;
+}
+
+
+
+.regist{
+  max-width: 400px;
+  /*margin: 0 auto;*/
+  padding: 15px 15px;
+}
+
+#text_auth{
+  padding: 15px 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: steelblue;
+  letter-spacing: 2px
+}
+
+
+
+
+
+
+.regist .mm{
+  padding: 15px 8px;
+  margin-bottom: 1rem;
+  width: 99%;
+}
+
+.regist .mm::placeholder{
+  text-transform: capitalize;
+}
+
+.regist select{
+  padding: 10px 8px;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-transform: capitalize;
+
+}
+
+.btn_login2{
+  padding: 5px 5px;
+}
+
+
+/*
+
+
+page add
+*/
+
+.all_sec {
+/*  border-bottom:8px solid  ;
+  border-right:8px solid steelblue;*/
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+}

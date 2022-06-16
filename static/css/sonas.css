@@ -1,0 +1,172 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --color-primary: #9933cc;
+        --color-dark: #111;
+    }
+    /*
+*************************************************
+
+STYLE DE LA PAGE LOGIN SECRET
+
+*************************************************
+*/
+    
+    .body_all {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #111;
+    }
+    
+    .body_flex {
+        padding: 8px 8px;
+        width: 550px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #111;
+        border: 3px solid whitesmoke;
+        /* border-right: 8px solid steelblue;
+    border-start-end-radius: 50px; */
+    }
+    
+    .body_text {
+        padding: 5px 5px;
+        text-align: center;
+        color: beige;
+        letter-spacing: 3px;
+    }
+    
+    .body_text::first-letter {
+        /* color: steelblue; */
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+    
+    .body_form {
+        display: flex;
+        padding: 5px 5px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .body_form input[type='password'] {
+        width: 95%;
+        padding: 10px 20px;
+    }
+    
+    .body_form input[type='password']::placeholder {
+        color: var(--color-dark);
+        text-transform: capitalize;
+    }
+    
+    .body_form input[type='submit'] {
+        width: 25%;
+        padding: 10px 20xp;
+    }
+    /*
+*************************************************
+
+STYLE DE LA PAGE LOGIN 
+
+*************************************************
+*/
+    
+    .login_height {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, #000, #0008), url('/static/images/img1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .login_flex {
+        max-width: 550px;
+        padding: 10px 10px;
+        border-radius: 10px;
+        background-color: #c0c0c0;
+        /* background-color: transparent; */
+        opacity: 0.4;
+    }
+    
+    .login_title {
+        color: #000;
+        padding: 10px 10px;
+        margin: 0 auto;
+    }
+    
+    .login_form {
+        width: 450px;
+        margin: 0 auto;
+        padding: 4px 10px;
+    }
+    
+    .form_login {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 15px 5px;
+    }
+    
+    .form_login input[type='text'],
+    .form_login input[type='password'],
+    .form_login input[type='email'],
+    select {
+        border: none;
+        padding: 10px 10px;
+        margin-bottom: 1rem;
+        background-color: #c0c0c0;
+        border-bottom: 2px solid #0008;
+        /* background-color: transparent;*/
+        border-bottom: 2px solid #fff;
+    }
+    
+    .form_login input[type='submit'] {
+        width: 30%;
+        margin: 0 auto
+    }
+    /*
+*************************************************
+
+STYLE DE LA PAGE SECRETAIRE    et ARCHIVE
+
+*************************************************
+*/
+    
+    .presentation {
+        min-height: 40vh;
+        background: linear-gradient(to top, #000, #0008), url('/static/images/img1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chef {
+        min-height: 100vh;
+        background-color: #111;
+        display: flex;
+        align-items: center;
+    }
+    
+    .presentation2 {
+        min-height: 30vh;
+        background: linear-gradient(to top, #000, #0008), url('/static/images/img1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

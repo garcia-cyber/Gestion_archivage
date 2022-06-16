@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{%block title%} {% endblock %}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"  href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet"  href="{{url_for('static',filename='css/sonas.css')}}">
+        
+    </head>
+    <body>
+        {% block menu %}{%endblock%}  
+        {% block body %}{%endblock%}  
+    </body>
+</html>    

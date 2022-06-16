@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%block title%} archiviste{% endblock %}
+
+{% block menu %}{%endblock%} 
+
+{% block body %}
+<section class='presentation2'>
+    
+    <a href='' class='btn btn-outline-info text-uppercase'>profil user</a>  
+    <a href='' class='btn btn-outline-danger ml-4 text-uppercase'>deconnexion</a> 
+
+</section>
+
+<h2 class='text-center mb-5 mt-5'>{{'liste des agents'.upper()}}</h2>
+
+<div class="container-fluid pt-4 px-4 bg-dark">
+    <div class="bg-secondary text-center rounded p-4 bg-dark ">
+        <div class="d-flex align-items-center justify-content-between mb-4 bg-dark ">
+            <h6 class="mb-0 col-11"></h6>
+            <a href="" class="btn  mr-3 btn-block btn-success">{{'actualise'.capitalize()}}</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start bg-dark align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-white text-uppercase">
+                            <th>n</th>
+                            <th>noms</th>
+                            <th>postnoms</th>
+                            <th>prenoms</th>
+                            <th>sexes</th>
+                            
+                            <th>adresses</th>
+                            <th>communes</th>
+                            <th>phones</th>
+                            <th>date d'adhesion</th>
+                            <th>departements</th>
+                            <th>parametre</th>
+                          </tr>
+
+                    </tr>
+                </thead>
+                <tbody >
+                {%for i in data%}
+                <tr class='text-light text-center'>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td>{{i[4]}}</td>
+                    <td>{{i[5]}}</td>
+                    <td>{{i[6]}}</td>
+                    <td>{{i[7]}}</td>
+                    <td>{{i[8]}}</td>
+                    <td>{{i[9]}}</td>
+                    <td>
+                        <a href="" class="btn btn-block btn-info text-uppercase">profile</a>
+                        
+                    </td>
+                    
+
+                </tr>
+
+                {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{%endblock%}

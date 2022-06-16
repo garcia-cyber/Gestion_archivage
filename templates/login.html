@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+{% block title %}login enter {% endblock %}
+
+{% block body %}
+<section class='login_height'>
+    <section class='login_flex'>
+        {%with messages = get_flashed_messages()%}
+        {%if messages %}
+        {%for i in messages%}
+        <div class='alert alert-danger'>{{i}}</div>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        <section class='login_title'>
+            <h2 >connexion</h2>
+        </section>
+        <section class='login_form' name = 'acces'>
+            <form class = 'form_login' method='post' action ='/login_verify'>
+                <select name = 'acces'>
+                    {%for i in af%}
+                    <option value='{{i[0]}}'>{{i[1]}}</option> 
+                    {% endfor %}
+
+                </select>
+                <input type='text' placeholder = 'votre identifiant' name = 'user'>
+                <input type='password' placeholder = 'votre password' name = 'pwd'>
+                <input type = 'submit' value = 'connexion' class='btn_login  btn btn-secondary'>
+            </form>
+        </section>
+        <section class='text-dark font-weight-bold' > cliquez pour cree un compte<a href = '/register' class='btn btn-outline-info ml-3 mb-2'>cree un connte</a></section>
+    </section>
+    
+</section>
+{%endblock%} 
