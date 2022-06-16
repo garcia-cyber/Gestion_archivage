@@ -10,7 +10,7 @@ sql = mysql.connect(host='localhost', user = 'linux' , password = 'data', databa
 
 sonas = Flask(__name__)
 sonas.secret_key = " glody sonas"
-sonas.permanent_session_lifetime =timedelta(minutes=4) 
+sonas.permanent_session_lifetime =timedelta(minutes=1) 
 
 #interface d'accueil 
 @sonas.route('/')
@@ -63,7 +63,8 @@ def login_verify():
         acces = request.form['acces']
         user = request.form['user']
         pwd = request.form['pwd']
-        
+        session['user'] = user
+        session['log'] = user
         print(acces)
         
         cur = sql.cursor()
@@ -160,15 +161,19 @@ def register_verify():
 #page secretaire et son envoie
 @sonas.route('/secretaire')
 def secretaire():
-    cur = sql.cursor()
-    cur.execute("select * from communes")
-    all2 = cur.fetchall()
+    if 'validate' in session:
+        validate = session['validate']
+        cur = sql.cursor()
+        cur.execute("select * from communes")
+        all2 = cur.fetchall()
     
-    x = sql.cursor()
-    x.execute("select * from departements")
-    twos = x.fetchall()
-    return render_template('secretaire.html',on = all2 , two = twos)
+        x = sql.cursor()
+        x.execute("select * from departements")
+        twos = x.fetchall()
+        return render_template('secretaire.html',on = all2 , two = twos,use=session['validate'])
 
+    else:
+        return redirect(url_for('login'))
 @sonas.route('/secretaire_send' ,methods = ['POST'])
 def secretaire_send():
     if request.method == 'POST':
@@ -198,6 +203,7 @@ def secretaire_send():
 #interface d'archivage   
 @sonas.route('/archive')
 def archive():
+    
     cur = sql.cursor()
     cur.execute("select id_agent, nom,postnom,prenom,sexe,adresse,libelle,phone,date_embauche,upper(type_depart) from agents inner join communes on agents.commune = communes.id_commune inner join departements on agents.departement = departements.id_depart")
     data = cur.fetchall()
